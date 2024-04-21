@@ -45,6 +45,41 @@ Number	     "number"	            Number
 BigInt	     "bigint"	            BigInt
 String	     "string"            	String
 Symbol	     "symbol"           	Symbol
-
+array        "object"
 */
+
+// STACK (Primitive) -  gets the copy  , Heap (Non-Primitive) - gets the Reference of original value
+
+let myName = 'Anmol Kumar'
+let anotherName = myName
+anotherName = 'Shivanshu'
+
+console.log(myName)
+console.log(anotherName)
+
+let userOne = {
+    email : 'anmol@google.com',
+    upi : 'anmol@oksbi'
+}
+
+let userTwo = userOne
+userTwo.email = 'shivanshu@google.com'
+
+console.log(userOne.email)
+console.log(userTwo.email)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
