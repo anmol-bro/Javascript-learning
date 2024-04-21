@@ -1,4 +1,4 @@
-console.log("2">1);
+console.log("2">1); // javascript converts the string into integers for comparison if data inside the string is integer 
 console.log("02">1);
 
 console.log(null > 0); // null treated as 0
