@@ -13,6 +13,7 @@ console.log(myDate.toLocaleString())
 // let myCreatedDate = new Date("2023-01-14") //  directly any  format date can be taken 
 let myCreatedDate = new Date("01-14-2023") //this is MM-DD-YYYY format and not DD/MM/YYYY, as DD/MM/YYYY is not supported
 console.log(myCreatedDate.toLocaleString())
+console.log(myCreatedDate.toLocaleDateString())
 
 
 let myTimeStamp = Date.now();
@@ -23,3 +24,9 @@ console.log(Math.floor(Date.now()/1000)) // value in seconds
 
 console.log(myDate.getFullYear());
 console.log(myDate.getMonth());
+
+console.log( myDate.toLocaleString('default', {
+    weekday:"long",
+   era :"long"
+}))
+
