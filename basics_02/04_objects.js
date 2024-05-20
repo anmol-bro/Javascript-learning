@@ -50,3 +50,30 @@ console.log(Object.keys(tinderuser)); // returns array of all keys of an object
 console.log(Object.values(tinderuser)); // returns array of all values of an object
 console.log(Object.entries(tinderuser)); // returns array of array that contains key , value of an object
 console.log(tinderuser.hasOwnProperty('isLoggedIn'));  // it asks wheather a key is in that object or not
+
+/**************************************************************************************/
+//destructuring of object
+
+const course = {
+    courseName : "Js in hindi",
+    price : 999,
+    Instructer : "Hitesh"
+}
+
+//course.Instructer
+
+const {Instructer : Instr} = course
+console.log(Instr);
+
+//json - data that comes from API actually kind of object
+
+// {
+//     "name" :"Anmol",
+//     "city":"Chennai"
+// }
+// json can be in array format also
+[
+    {},
+    {},
+    {}
+]
