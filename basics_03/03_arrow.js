@@ -7,7 +7,7 @@ const user = {
     }
 }
 
-// user.welcomeMsg()
+//user.welcomeMsg()
 // user.username = 'Tanu'
 // user.welcomeMsg()
 //console.log(this) // if we run the same line globally  in browser , you will get windows object but in node environment {}
