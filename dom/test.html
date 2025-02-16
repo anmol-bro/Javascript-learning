@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button addition</title>
+</head>
+<body>
+    
+</body>
+<script>
+    arr1= ['Anmol','Krishna','Gogi','Mukesh','Aman']
+    arr2 = ['green', 'red','purple','blue','yellow','orange','voilet']
+    for (let i = 0; i < arr1.length; i++) {
+        multipleButtons(arr1[i],arr2[randomColors(arr2)])
+    }
+
+    function randomColors(colors){
+        return Math.round(Math.random() * colors.length)
+    }
+    function multipleButtons(text, color){
+        const button = document.createElement('button')
+        console.log(button)
+        button.setAttribute('className', 'newbutton')
+        button.setAttribute('id', Math.round(Math.random()* 10 +1))
+        button.setAttribute('type', 'submit')
+        button.style.backgroundColor = `${color}`
+        button.style.cursor = 'pointer'
+        button.style.padding = '10px'
+        button.style.borderRadius= '5px'
+        const buttonName = document.createTextNode(`${text}`)
+        button.appendChild(buttonName)
+        document.body.appendChild(button)
+    }
+</script>
+</html>
