@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: powderblue;">
+    <div id="id1" style="box-shadow: 0 4px 8px 0 rgba(7, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    font-family: arial;
+    padding: 20px;">
+        <img src="https://imgs.search.brave.com/ofPeJBl9o2_cLktaum8ZtMsdZh8mYw6HZBz5MQs0AL8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9nb29k/aWVzLmljb25zOC5j/b20vd2ViL2NvbW1v/bi9hdXRvY29tcGxl/dGUvZG9tYWlucy9w/aG90b3Muc3Zn" id='img' alt="Avatar" style="max-height: 200px; max-width: 200px;"/>
+        <h4 id="followers">Followers</h4>
+        <button id="btn">Get Card</button>
+    </div>
+    
+</body>
+<script>
+    //xml Http Request - Ajax Programming(Async js and xml)
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET' , requestUrl)
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);
+        const response = JSON.parse(this.responseText)
+        const profile_photo = document.getElementById('img')
+        const followers = document.getElementById('followers')
+        console.log(profile_photo );
+        console.log(followers);
+        if(xhr.readyState===4){
+            console.log(response.avatar_url)
+            document.getElementById('btn').addEventListener('click', function(){
+                profile_photo.src = response.avatar_url
+                followers.innerText = `Follower -> ${response.followers}`
+                console.log(profile_photo.src)
+            })
+        }
+    }
+    xhr.send()
+</script>
+</html>
